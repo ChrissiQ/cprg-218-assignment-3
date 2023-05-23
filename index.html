@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Accessibility Challenges</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            margin: 3rem 0;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 2rem 0;
+        }
+
+        footer {
+            background-color: #999;
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 50rem;
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+        }
+
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 20rem;
+            max-width: 100%;
+        }
+
+        .contact {
+            background-color: #f2f2f2;
+            padding: 1rem;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.75rem 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .contact .form-control:focus,
+        .contact .form-control:hover,
+        .contact .form-control:focus-visible {
+            outline: none;
+        }
+
+        .contact button {
+            padding: 0.75rem 1.5rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h1>Welcome to Parasol Corporation</h1>
+                <p>We are a leading provider of innovative solutions for businesses.</p>
+            </section>
+
+            <section>
+                <h3>About Us</h3>
+                <p>At Parasol Corp, we strive to deliver exceptional products and services to our clients.</p>
+            </section>
+
+            <section>
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Web design</li>
+                    <li>Mobile app development</li>
+                    <li>E-commerce solutions</li>
+                    <li>Digital marketing</li>
+                    <li>Definitely nothing nefarious</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Contact Us</h3>
+                <form class="contact">
+                    <span class="label">Name:</span>
+                    <input type="text" id="name" class="form-control">
+                    <span class="label">Email:</span>
+                    <input type="text" id="email" class="form-control">
+                    <span class="label">Message:</span>
+                    <textarea id="message" class="form-control"></textarea>
+                    <button type="submit" class="form-control">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container columns">
+            <p>&copy; Parasol Corporation 2023</p>
+            <p>123 Umbrella Way, Raccoon City, AY</p>
+        </div>
+    </footer>
+</body>
+
+</html>
